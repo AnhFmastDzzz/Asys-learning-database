@@ -10,11 +10,11 @@ Moreover, the questions and the answers will be primarily viewed based on the to
 We chose Oracle to build the system for this database 
 
 The basic functions that our database has are:
-    -  1. There are 3 roles in this DB(Teacher, Student, Administrator)
-    -  2. Giving marks and comments on students' homework assignments 
-    -  3. Publishing courses 
-    -  4. Creating forum posts, discussions, in which users can upvote or downvote
-    -  5. Users can sign in and sign up
+    -  There are 3 roles in this DB(Teacher, Student, Administrator)
+    -  Giving marks and comments on students' homework assignments 
+    -  Publishing courses 
+    -  Creating forum posts, discussions, in which users can upvote or downvote
+    -  Users can sign in and sign up
 
     
 We also built a web demo for this project, but so far, it only has functions for Student role users. Users can sign up,  take a course and create or comment on a forum discussion.
