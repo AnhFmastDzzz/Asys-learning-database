@@ -2,7 +2,7 @@
 
 Here is an online course managing database group project for my information management class(Quản lí thông tin - IE103).
 
-We take references from popular online course platforms like Coursera, Udemy, Khan Academy, Moodle and even Stack Overflow to create  a database that is asynchronous and will not only aim to provide online courses but also a more active environment that anyone can understand and improve on a section of a course that they are taking or even problems from the classes that they have never taken before.
+We take references from popular online course platforms like Coursera, Udemy, Khan Academy, Moodle and even Stack Overflow to create  a database that is asynchronous and will not only aim to provide online courses but also a more active environment that anyone can understand and improve on a section of a course that they are taking or even problems from the courses that they have never taken before.
 
 We planned to achieve that by adding a forum function, in which forum posts and forum answers can have upvotes and downvotes like the ones that the StackOverflow platform is famous for. This forum function will be displayed in home page in which any users, no matter what courses they are taking, can take part in the forum, making the answers more diverse and more helpful to both the questioners and the answerers, opposite from Khan Academy and Coursera. 
 Moreover, the questions and the answers will be primarily viewed based on the total votes(Upvote - Downvotes) referenced by Stack Overflow, meaning discussions that are highly interesting will have a higher chance of being seen by all users.
