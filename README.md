@@ -15,7 +15,8 @@ The basic functions that our database has are:
     - 3. Publishing courses 
     - 4. Creating forum posts, discussions, in which users can upvote or downvote
     - 5. Users can sign in and sign up
-
+    #^ two spaces
+    
 We also built a web demo for this project, but so far, it only has functions for Student role users. Users can sign up,  take a course and create or comment on a forum discussion.
 
 Our team only builds this database for the project report of the IE103 class, hence we do not have any plans to develop this project together any longer, although there are still a lot of weak points and creative idea for this database.
