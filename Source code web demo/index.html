@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Quản lý Khóa Học</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- PHASE 1: Đăng nhập -->
+  <div id="loginSection">
+    <h2>Đăng nhập</h2>
+    <div>
+      <input type="text" id="mahvInput" placeholder="Mã học viên">
+      <button id="loginHvBtn">Đăng nhập học viên</button>
+    </div>
+    <br>
+    <div>
+      <input type="text" id="magvInput" placeholder="Mã giảng viên">
+      <button id="loginGvBtn">Đăng nhập giảng viên</button>
+    </div>
+  </div>
+
+  <!-- PHASE 2: Đăng ký học viên mới -->
+  <div id="registerSection">
+    <h2>Đăng ký học viên mới</h2>
+    <input type="text" id="regMahv" placeholder="Mã học viên (ví dụ HV999)"><br>
+    <input type="text" id="regHoten" placeholder="Họ tên"><br>
+    <input type="date" id="regNgaysinh"><br>
+    <input type="email" id="regEmail" placeholder="Email"><br>
+    <button id="registerBtn">Đăng ký</button>
+    <p id="registerResult" style="font-weight: bold;"></p>
+  </div>
+
+  <!-- PHASE 3: Giao diện chính sau khi đăng nhập -->
+  <div id="mainSection" style="display: none;">
+    <h1>Danh sách khóa học</h1>
+    <p id="welcomeMsg"></p>
+    <button onclick="logout()" style="float: right;">Đăng xuất</button>
+
+    <!-- Nút xem khóa học đã đăng ký -->
+    <button id="viewMyCoursesBtn">Xem khóa học đã đăng ký</button>
+
+    <!-- Tìm kiếm khóa học -->
+    <input type="text" id="searchInput" placeholder="Nhập từ khóa khóa học">
+    <button id="searchBtn">Tìm kiếm</button>
+    <p id="debugMessage" style="color: red; font-weight: bold;"></p>
+    <!-- Nút Diễn đàn -->
+    
+    <!-- Bảng kết quả khóa học hoặc đã đăng ký -->
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Mã KH</th>
+          <th>Tên khóa học</th>
+          <th>Mô tả</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="results"></tbody>
+    </table>
+
+    <!-- Diễn đàn khóa học -->
+    <div id="forumSection" style="margin-top:20px; display:none;">
+      <h2>Diễn đàn khóa học</h2>
+      <input type="text" id="newTopicTitle" placeholder="Tiêu đề thảo luận"><br>
+      <textarea id="newTopicContent" placeholder="Nội dung thảo luận..." rows="3" style="width:100%;"></textarea><br>
+      <button id="postTopicBtn">Đăng thảo luận</button>
+      <div id="topicList" style="margin-top:20px;"></div>
+    </div>
+
+    <!-- Vùng hiển thị bài học khi click "Vào học" -->
+    <div id="lessonSection" style="display: flex; gap: 20px; margin-top:20px;">
+      <!-- DANH SÁCH BÀI HỌC -->
+      <div id="lessonList" style="width: 30%; background: #fff; padding: 20px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="text-align:center; color: var(--primary);">Danh sách bài học</h3>
+        <ul style="list-style: disc inside;"></ul>
+      </div>
+    
+      <!-- CHI TIẾT MÔ TẢ -->
+      <div id="lessonDetail" style="width: 70%; background: #fff; padding: 20px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+        <!-- Tại đây sẽ render các block -->
+      </div>
+    </div>
+    <div id="helpSection" style="display:none; margin-top:30px;">
+      <h2 style="color:#4a90e2;">Trung tâm trợ giúp</h2>
+      <ul style="list-style: none; padding: 0;">
+        <li class="help-question" data-id="q1">Làm sao để thanh toán học phí khóa học?</li>
+        <li class="help-question" data-id="q2">Hệ thống hỗ trợ những hình thức thanh toán nào?</li>
+        <li class="help-question" data-id="q3">Tôi đã thanh toán nhưng không thấy khóa học được kích hoạt?</li>
+      </ul>
+    
+      <div id="helpAnswer" style="margin-top:20px;"></div>
+    </div>
+    
+<!-- THÊM NGAY SAU <body> hoặc ngay đầu #mainSection -->
+  <!-- THÊM NGAY SAU <body> -->
+<div id="sidebar-trigger"></div>
+<aside id="sidebar">
+  <nav>
+    <!-- trong <aside id="sidebar"> hoặc chỗ bạn muốn -->
+<ul>
+  <li><button id="forumBtn">Diễn đàn</button></li>
+  <li><button id="homeBtn">Trang chủ</button></li>
+  <li><button id="helpBtn">Trợ giúp</button></li>
+</ul>
+
+  </nav>
+</aside>
+
+  <aside id="sidebar" class="hidden">
+    <nav>
+      <ul>
+        <li><button id="forumBtn">Diễn đàn</button></li>
+        <li><button id="homeBtn">Trang chủ</button></li>
+        <!-- thêm nút khác nếu cần -->
+      </ul>
+    </nav>
+  </aside>
+  
+  <!-- PHASE 4: Giao diện giảng viên -->
+  <div id="gvSection" style="display: none;">
+    <h1>Xin chào giảng viên!</h1>
+    <p id="gvWelcomeMsg"></p>
+    <button onclick="logout()">Đăng xuất</button>
+    <hr>
+    <h2>Tạo khóa học mới</h2>
+    <div>
+      <input type="text" id="courseMakh" placeholder="Mã khóa học"><br>
+      <input type="text" id="courseTen" placeholder="Tên khóa học"><br>
+      <label>Ngày tạo:</label>
+      <input type="date" id="courseNgayTao"><br>
+      <label>Ngày cập nhật:</label>
+      <input type="date" id="courseNgayCapNhat"><br>
+      <textarea id="courseMoTa" placeholder="Mô tả khóa học"></textarea><br>
+      <input type="text" id="courseTrangThai" placeholder="Trạng thái"><br>
+      <input type="text" id="courseNgoaiNgu" placeholder="Ngoại ngữ"><br>
+      <input type="text" id="courseChungChi" placeholder="Chứng chỉ"><br>
+      <button id="createCourseBtn">Tạo khóa học</button>
+      <p id="createCourseMsg" style="font-weight: bold;"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

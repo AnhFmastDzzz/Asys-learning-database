@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Diễn đàn chung</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Cho chắc chắn container có padding */
+    main.container { padding: 20px; }
+    /* Style cho nút Tạo chủ đề */
+    #createTopicBtn { margin-bottom: 20px; }
+    /* Style cho từng topic */
+    .topic { background: #fff; padding: 15px; border-radius:6px; box-shadow:0 2px 8px rgba(0,0,0,0.1); margin-bottom:20px; }
+    .topic h3 { margin:0 0 5px; color: var(--primary); }
+    .topic small { color:#666; font-size:0.9em; }
+    .comment-list p { margin:5px 0; }
+  </style>
+</head>
+<body>
+  <header style="background: var(--primary); color:#fff; padding:15px; position:sticky; top:0; z-index:100">
+    <span style="font-size:1.2em">🗨️ Diễn đàn chung</span>
+    <button onclick="goHome()" style="float:right; background: var(--accent); color:#fff; border:none; padding:8px 12px; border-radius:4px; cursor:pointer">
+      TRANG CHỦ
+    </button>
+  </header>
+
+  <main class="container">
+    <!-- Nút tạo chủ đề mới -->
+    <button id="createTopicBtn" class="btn">Tạo chủ đề mới</button>
+    <!-- Nơi hiển thị các topic -->
+    <div id="topicsList"></div>
+  </main>
+
+  <!-- Chèn file JS cuối body để chắc chắn DOM đã có -->
+  <script src="forum.js"></script>
+</body>
+</html>
