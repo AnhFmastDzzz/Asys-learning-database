@@ -21,3 +21,5 @@ We also built a web demo for this project, but so far, it only has functions for
 
 Our team only builds this database for the project report of the IE103 class, hence we do not have any plans to develop this project together any longer, although there are still a lot of weak points and creative idea for this database.
 Rather, we agreed on using this project to develop personally if anyone has the intention to do so.
+
+For me personally, I interested in the education field and would love to do something to help any children with any background believe that they are able to learn any subjects at school and can also getting better and apply it to real life, that is the reason I voted to choose this topic for IE103 report project with our team so that I can use the knownledge I accquired from this project to my future eduacation projects :D
