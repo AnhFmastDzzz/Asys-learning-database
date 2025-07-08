@@ -2,7 +2,7 @@
 
 Here is an online course managing database group project for my information management class(Quản lí thông tin - IE103).
 
-We take refferences from popular online course platforms like Coursera, Udemy, Khan Academy, Moodle and even Stack Overflow to create  a database that is asynchronous and will not only aim to provide online courses but also a more active environment that anyone can understand and improve on a section of a course that they are taking or even problems from the classes that they have never taken before.
+We take references from popular online course platforms like Coursera, Udemy, Khan Academy, Moodle and even Stack Overflow to create  a database that is asynchronous and will not only aim to provide online courses but also a more active environment that anyone can understand and improve on a section of a course that they are taking or even problems from the classes that they have never taken before.
 
 We planned to achieve that by adding a forum function, in which forum posts and forum answers can have upvotes and downvotes like the ones that the StackOverflow platform is famous for. This forum function will be displayed in home page in which any users, no matter what courses they are taking, can take part in the forum, making the answers more diverse and more helpful to both the questioners and the answerers, opposite from Khan Academy and Coursera. 
 Moreover, the questions and the answers will be primarily viewed based on the total votes(Upvote - Downvotes) referenced by Stack Overflow, meaning discussions that are highly interesting will have a higher chance of being seen by all users.
@@ -22,4 +22,4 @@ We also built a web demo for this project, but so far, it only has functions for
 Our team only builds this database for the project report of the IE103 class, hence we do not have any plans to develop this project together any longer, although there are still a lot of weak points and creative idea for this database.
 Rather, we agreed on using this project to develop personally if anyone has the intention to do so.
 
-For me personally, I interested in the education field and would love to do something to help any children with any background believe that they are able to learn any subjects at school and can also getting better and apply it to real life, that is the reason I voted to choose this topic for IE103 report project with our team so that I can use the knownledge I accquired from this project to my future eduacation projects :D
+For me personally, I am interested in the education field and would love to do something to help any children with any background believe that they are able to learn any subjects at school and can also getting better and apply it to real life, that is the reason I voted to choose this topic for IE103 report project with our team so that I can use the knownledge I accquired from this project for my future eduacation projects 
