@@ -1,4 +1,4 @@
-# Asys-learning-database
+# Asyn-learning-database
 
 Here is an online course managing database group project for my information management class(Quản lí thông tin - IE103).
 
